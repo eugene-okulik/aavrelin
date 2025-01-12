@@ -2,8 +2,8 @@
 
 a = 3
 b = 14
-sr_arif = (a + b)/2
-sr_geom = (a + b)**(1/2)
+sr_arif = (a + b) / 2
+sr_geom = (a + b) ** (1 / 2)
 print(
     "Среднее арифметическое  = " + str(sr_arif),
     "\n Среднее геометрического  = " + str(sr_geom)
