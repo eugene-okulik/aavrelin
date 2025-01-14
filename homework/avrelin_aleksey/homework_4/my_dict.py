@@ -1,4 +1,4 @@
-my_dict = {'tuple': (),'list': [],'dict': {},'set': {}}
+my_dict = {'tuple': (), 'list': [], 'dict': {}, 'set': {}}
 
 my_dict['tuple'] = (42, 2, 'Hello', True, 111)
 my_dict['list'] = [1, 2, 3, 'Python', False, 2.2]
