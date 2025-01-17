@@ -5,7 +5,7 @@ print(words)
 new_text = []
 for word in words:
     if '.' in word:
-        word_new = word.replace('.','ing.')
+        word_new = word.replace('.', 'ing.')
         new_text.append(word_new)
     elif ',' in word:
         word_new = word.replace(',', 'ing,')
