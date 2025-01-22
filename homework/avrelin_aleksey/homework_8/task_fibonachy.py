@@ -11,13 +11,12 @@ def fibon(*args):
         fn = fn1 + fn2
         fn2 = fn1
         fn1 = fn
-        fn1 = fn
         n += 1
 
 
-# # number = input('Введи номер результата,через запятую: ')
-# # args = [int(a) for a in number.split(',')]
+# number = input('Введи номер результата,через запятую: ')
+# args = [int(a) for a in number.split(',')]
 args = (5, 200, 1000, 10000)
 result = list(fibon(*args))
-for a in result:
-    print(a)
+for b in result:
+    print(b)
