@@ -4,7 +4,7 @@ def fibon(*args):
     fn2 = 1
     fn = 0
     n = 0
-    while n <= max(args):
+    while True:
         for a in args:
             if n + 1 == a:
                 yield f"{a}-ым числом фибоначи является: {fn}"
@@ -16,7 +16,10 @@ def fibon(*args):
 
 # number = input('Введи номер результата,через запятую: ')
 # args = [int(a) for a in number.split(',')]
-args = (5, 200, 1000, 10000)
-result = list(fibon(*args))
-for b in result:
-    print(b)
+# args = (5, 200, 1000, 10)
+# result = list(fibon(*args))
+# for b in result:
+#     print(b)
+args = (5, 200, 1000, 10)
+for result in fibon(*args):
+    print(result)
