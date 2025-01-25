@@ -10,7 +10,7 @@ def new_temperatures(x):
         return x
 
 
-hot_days = list(filter(None, map(new_temperatures,temperatures)))
+hot_days = list(filter(None, map(new_temperatures, temperatures)))
 print('Минимальная температура: ', min(hot_days))
-print('Средняя температура: ', round(sum(hot_days)/len(hot_days)))
+print('Средняя температура: ', round(sum(hot_days) / len(hot_days)))
 print('Макмальная температура: ', max(hot_days))
