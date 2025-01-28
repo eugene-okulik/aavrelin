@@ -2,13 +2,13 @@ def arithmetic(func):
 
     def wrapper(x, y, operation):
         if x < 0 or y < 0:
-             operation = '*'
+            operation = '*'
         elif x == y:
-             operation = '+'
+            operation = '+'
         elif x > y:
-             operation = '-'
+            operation = '-'
         elif x < y:
-             operation = '/'
+            operation = '/'
         return func(first, second, operation)
 
     return wrapper
