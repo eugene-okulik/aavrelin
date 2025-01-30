@@ -2,7 +2,7 @@ class Book:
     page_material = 'бумага'
     availability_of_text = True
 
-    def __init__(self, book_title, author, number_of_pages, flag_whether_the_book = False, isbn = None):
+    def __init__(self, book_title, author, number_of_pages, flag_whether_the_book=False, isbn=None):
         self.book_title = book_title
         self.author = author
         self.number_of_pages = number_of_pages
@@ -29,7 +29,7 @@ class Book:
 
 
 class SchoolBooks(Book):
-    def __init__(self, book_title, author, number_of_pages, lesson, class_name, flag_whether_the_book = False):
+    def __init__(self, book_title, author, number_of_pages, lesson, class_name, flag_whether_the_book=False):
         super().__init__(book_title, author, number_of_pages, flag_whether_the_book)
         self.lesson = lesson
         self.class_name = class_name
