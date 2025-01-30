@@ -45,7 +45,7 @@ class SchoolBooks(Book):
                 f" класс: {self.class_name}"
             )
         else:
-            return(
+            return (
                 f"Название: {self.book_title},"
                 f" Автор: {self.author},"
                 f" страниц: {self.number_of_pages},"
