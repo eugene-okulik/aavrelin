@@ -8,5 +8,5 @@ PRICE_LIST = '''тетрадь 50р
 
 price = PRICE_LIST.split()
 PRICE_LIST_for_everyone = zip(price[::2], price[1::2])
-PRICE_dict = {x: y[:-1] for x, y in PRICE_LIST_for_everyone}
+PRICE_dict = {x: int(y[:-1]) for x, y in PRICE_LIST_for_everyone}
 print(PRICE_dict)
