@@ -72,7 +72,7 @@ bouquet = Bouquet()
 flower1 = Flower1('Петуния', 'красный', 13, 50, 200, 5)
 flower2 = Flower2('Тюльпан', 'желтый', 5, 40, 154, 8)
 flower3 = Flower3('Роза', 'белый', 2, 0, 300, 11)
-flower4 = Flower3('Гладиоус', 'фиолетовые', 2, 40, 550,12)
+flower4 = Flower3('Гладиоус', 'фиолетовые', 2, 40, 550, 12)
 flower5 = Flower3('Гвоздика', 'синий', 8, 64, 444, 22)
 
 bouquet.add_flower(flower1)
