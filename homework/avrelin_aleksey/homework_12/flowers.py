@@ -49,31 +49,38 @@ class Bouquet:
     def __str__(self):
         return "\n".join(str(flower) for flower in self.list_flowers)
 
+    def sort_fresh(self):
+        self.list_flowers.sort(key=lambda flower: flower.fresh)
 
-class Sorter:
-    @staticmethod
-    def sort_fresh(bouquet_flowers):
-        return sorted(bouquet_flowers.list_flowers, key=lambda flower: flower.fresh)
+    def sort_color(self):
+        self.list_flowers.sort(key=lambda flower: flower.color)
 
-    @staticmethod
-    def sort_color(bouquet_flowers):
-        return sorted(bouquet_flowers.list_flowers, key=lambda flower: flower.color)
+    def sort_length(self):
+        self.list_flowers.sort(key=lambda flower: flower.length)
 
-    @staticmethod
-    def sort_length(bouquet_flowers):
-        return sorted(bouquet_flowers.list_flowers, key=lambda flower: flower.length)
+    def sort_price(self):
+        self.list_flowers.sort(key=lambda flower: flower.price)
 
-    @staticmethod
-    def sort_price(bouquet_flowers):
-        return sorted(bouquet_flowers.list_flowers, key=lambda flower: flower.price)
+    # Поиск цветов с временем жизни
+    def flower_find_life(self, life):
+        flower_name_find = [flower for flower in self.list_flowers if flower.life == life]
+        result_flower_name_find = '\n'.join(str(flower) for flower in flower_name_find)
+        print (result_flower_name_find)
+
+    # Поиск цветов с временем жизни
+    def flower_name_find(self, names):
+        flower_name_find = [flower for flower in self.list_flowers if flower.name_flower == names]
+        result_flower_name_find = '\n'.join(str(flower) for flower in flower_name_find)
+        print(result_flower_name_find)
+
 
 
 bouquet = Bouquet()
-flower1 = Flower1('Петуния', 'красный', 13, 50, 200, 5)
-flower2 = Flower2('Тюльпан', 'желтый', 5, 40, 154, 8)
-flower3 = Flower3('Роза', 'белый', 2, 0, 300, 11)
-flower4 = Flower3('Гладиоус', 'фиолетовые', 2, 40, 550, 12)
-flower5 = Flower3('Гвоздика', 'синий', 8, 64, 444, 22)
+flower1 = Flower1('Петуния', 'красный', 13, 11, 200, 5)
+flower2 = Flower2('Тюльпан', 'желтый', 5, 25, 154, 8)
+flower3 = Flower3('Роза', 'белый', 2, 10, 300, 11)
+flower4 = Flower3('Гвоздика', 'фиолетовые', 2, 22, 550, 12)
+flower5 = Flower3('Гвоздика', 'синий', 8, 8, 444, 22)
 
 bouquet.add_flower(flower1)
 bouquet.add_flower(flower2)
@@ -85,18 +92,14 @@ print(bouquet)
 print(f'\nСтоимость букета: {bouquet.cost()} руб')
 print(f'\nСреднее время жизни букета: {bouquet.avg_life()} дней')
 
-Sorter.sort_color(bouquet)
-print('\nСортировка букета по цвету:')
+bouquet.sort_length()
+print('\nСортировка букета по длине стебля:')
 print(bouquet)
 
-lifetime = 5
-print(f"\nПоиск цветов с временем жизни {lifetime} дней")
-flower_life_find = [flower for flower in bouquet.list_flowers if flower.life == lifetime]
-result_flower_life_find = '\n'.join(str(flower) for flower in flower_life_find)
-print(result_flower_life_find)
+flower_life = 5
+print(f"\nПоиск цветов с временем жизни {flower_life} дней")
+bouquet.flower_find_life(flower_life)
 
 name = 'Гвоздика'
 print(f"\nПоиск цветка по имени {name}")
-flower_name_find = [flower for flower in bouquet.list_flowers if flower.name_flower == name]
-result_flower_name_find = '\n'.join(str(flower) for flower in flower_name_find)
-print(result_flower_name_find)
+bouquet.flower_name_find(name)
