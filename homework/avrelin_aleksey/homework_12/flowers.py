@@ -65,7 +65,7 @@ class Bouquet:
     def flower_find_life(self, life):
         flower_name_find = [flower for flower in self.list_flowers if flower.life == life]
         result_flower_name_find = '\n'.join(str(flower) for flower in flower_name_find)
-        print (result_flower_name_find)
+        print(result_flower_name_find)
 
     # Поиск цветов с временем жизни
     def flower_name_find(self, names):
