@@ -74,7 +74,6 @@ class Bouquet:
         print(result_flower_name_find)
 
 
-
 bouquet = Bouquet()
 flower1 = Flower1('Петуния', 'красный', 13, 11, 200, 5)
 flower2 = Flower2('Тюльпан', 'желтый', 5, 25, 154, 8)
