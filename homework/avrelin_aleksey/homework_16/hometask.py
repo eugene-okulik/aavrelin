@@ -59,15 +59,15 @@ for csv_row in csv_data:
         ) = csv_row
     found_in_base = "Не найдено"
     for base_row in student_info:
-        if (base_row['student_name'] == name and
-            base_row['student_second_name'] == second_name and
-            base_row['group_title'] == group_title and
-            base_row['book_title'] == book_title and
-            base_row['subject_title'] == subject_title and
-            base_row['lesson_title'] == lesson_title and
-            str(base_row['mark_value']) == mark_value):
-            found_in_base = "Найдено"
-            break
+        if (base_row['student_name'] == name
+            and base_row['student_second_name'] == second_name
+            and base_row['group_title'] == group_title
+            and base_row['book_title'] == book_title
+            and base_row['subject_title'] == subject_title
+            and base_row['lesson_title'] == lesson_title
+            and str(base_row['mark_value']) == mark_value):
+                found_in_base = "Найдено"
+                break
 
     if found_in_base == "Не найдено":
         print(f'name: {name}, second_name: {second_name}, group_title: {group_title},'
