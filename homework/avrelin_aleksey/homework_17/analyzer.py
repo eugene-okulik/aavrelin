@@ -10,9 +10,7 @@ parser.add_argument("-f", "--full", help="Full search", action="store_true")
 args = parser.parse_args()
 
 def find_text_in_log_file(directory, text_in_logs_file, full_logs_in_file):
-    # Для каждого файла заканчивающегося на '.log' в каталоге
     list_all_files = [f for f in os.listdir(directory) if f.endswith('.log')]
-
     for log_file in list_all_files:
         log_dir_path = os.path.join(directory, log_file)
         try:
@@ -24,20 +22,14 @@ def find_text_in_log_file(directory, text_in_logs_file, full_logs_in_file):
                         print('Текст найден в: ', log_file, number_line)
                         line_split = line.split()
                         index_text = line_split.index(text_in_logs_file)
-                        start = max(0, index_text-5)
-                        end = min(len(line_split), (index_text + len(text_in_logs_file))+5)
-                        print({" ".join(line_split[start:end])})
+                        start = max(0, index_text - 5)
+                        finish = index_text + len(text_in_logs_file) + 5
+                        print({" ".join(line_split[start:finish])})
+                        if full_logs_in_file is False:
+                            return
 
         except FileNotFoundError:
             print(f'Файл {log_file} не найден')
 
 
-
 find_text_in_log_file(args.directory, args.text, args.full)
-
-
-
-
-
-
-

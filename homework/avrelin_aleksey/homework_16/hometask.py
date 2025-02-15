@@ -35,7 +35,6 @@ query = """
 """
 cursor.execute(query)
 student_info = cursor.fetchall()
-# print(student_info)
 
 file = 'data.csv'
 base_path = os.path.dirname(__file__)
