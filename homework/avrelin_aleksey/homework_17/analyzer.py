@@ -4,7 +4,7 @@ import os
 
 parser = argparse.ArgumentParser()
 parser.add_argument("directory", help="Directory in log files")
-parser.add_argument("-t","--text", help="text for search in logs file")
+parser.add_argument("-t", "--text", help="text for search in logs file")
 parser.add_argument("-f", "--full", help="Full search", action="store_true")
 
 args = parser.parse_args()
