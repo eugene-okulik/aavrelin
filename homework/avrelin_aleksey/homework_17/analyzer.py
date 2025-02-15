@@ -9,6 +9,7 @@ parser.add_argument("-f", "--full", help="Full search", action="store_true")
 
 args = parser.parse_args()
 
+
 def find_text_in_log_file(directory, text_in_logs_file, full_logs_in_file):
     list_all_files = [f for f in os.listdir(directory) if f.endswith('.log')]
 
