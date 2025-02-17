@@ -32,8 +32,8 @@ def test_put():
     body = {"name": "Новые объекты", "data": {"стихия_1": "Вода", "стихия_2": "Земля" }}
     headers = {"Content-Type": "application/json"}
     response = requests.put(f'http://167.172.172.115:52353/object/{post_id}',
-                             json=body,
-                             headers=headers)
+                            json=body,
+                            headers=headers)
     assert response.status_code == 200, "Объект не изменен"
     print(response.json())
     clear(post_id)
@@ -44,8 +44,8 @@ def test_patch():
     body = {"name": "НАИМЕНОВАНИЕ"}
     headers = {"Content-Type": "application/json"}
     response = requests.patch(f'http://167.172.172.115:52353/object/{post_id}',
-                             json=body,
-                             headers=headers)
+                              json=body,
+                              headers=headers)
     assert response.status_code == 200, "Объект не изменен"
     print(response.json())
     clear(post_id)
