@@ -29,7 +29,7 @@ def test_get_one():
 
 def test_put():
     post_id = post_for_test()
-    body = {"name": "Новые объекты", "data": {"стихия_1": "Вода", "стихия_2": "Земля" }}
+    body = {"name": "Новые объекты", "data": {"стихия_1": "Вода", "стихия_2": "Земля"}}
     headers = {"Content-Type": "application/json"}
     response = requests.put(f'http://167.172.172.115:52353/object/{post_id}',
                             json=body,
