@@ -44,10 +44,11 @@ def test_get_all(start_end_message, print_before_after):
     assert response.status_code == 200
     print(response.json())
 
+
 @pytest.mark.parametrize('body', [
-    {"name":"Важное", "data": {"объект": "ВОЗДУХ"}},
-    {"name": "Техника", "data": {"Машина1": "БМВ", "Машина2": "Мерседес" }},
-    {"name":"Нужное", "data": {"Деньги": "наличные"}}
+    {"name": "Важное", "data": {"объект": "ВОЗДУХ"}},
+    {"name": "Техника", "data": {"Машина1": "БМВ", "Машина2": "Мерседес"}},
+    {"name": "Нужное", "data": {"Деньги": "наличные"}}
 ])
 def test_post(body):
     headers = {"Content-Type": "application/json"}
