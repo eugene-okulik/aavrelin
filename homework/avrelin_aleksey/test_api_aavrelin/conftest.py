@@ -100,6 +100,7 @@ def check_get_test_status_code(get_post_endpoint):
 def check_update_test_status_code(update_post_endpoint):
     return StatusCode(update_post_endpoint)
 
+
 @pytest.fixture
 def post_id_for_put():
     return 42

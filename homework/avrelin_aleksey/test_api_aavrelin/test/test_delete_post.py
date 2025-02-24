@@ -1,8 +1,6 @@
 import pytest
 import allure
 
-from test_api_aavrelin.conftest import check_delete_test_status_code
-
 
 @pytest.mark.smoke
 @allure.title("Удаление объекта")

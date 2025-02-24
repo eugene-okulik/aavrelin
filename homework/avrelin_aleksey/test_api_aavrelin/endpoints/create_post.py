@@ -17,6 +17,6 @@ class CreatePost(Endpoint):
         if 'application/json' in self.response.headers.get('Content-Type', ''):
             try:
                 self.json = self.response.json()
-            except:
-                raise ValueError("Сервер вернул не JSON")
+            except ValueError:
+                print("Сервер вернул не JSON")
         return self.response
