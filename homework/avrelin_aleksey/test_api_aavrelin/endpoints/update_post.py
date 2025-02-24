@@ -16,7 +16,6 @@ class UpdatePost(Endpoint):
         )
         return self.response
 
-
     @allure.step("Изменение объекта c помощью patch")
     def update_patch_post(self, post_id, body, headers=None):
         headers = headers if headers else self.headers

@@ -5,8 +5,6 @@ from test_api_aavrelin.endpoints.data_for_test import TEST_DATA_1
 from test_api_aavrelin.endpoints.data_for_test import NEGATIVE_DATA
 
 
-
-
 @pytest.mark.smoke
 @allure.title("Успешное создание объекта")
 @pytest.mark.parametrize("body", TEST_DATA_1)
