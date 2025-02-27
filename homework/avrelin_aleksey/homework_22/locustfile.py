@@ -1,6 +1,7 @@
 from locust import task, HttpUser
 import random
 
+
 # url = 'https://jsonplaceholder.typicode.com'
 class MemeUser(HttpUser):
     token = None
