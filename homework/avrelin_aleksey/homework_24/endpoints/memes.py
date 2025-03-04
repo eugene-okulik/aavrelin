@@ -30,9 +30,6 @@ class Memes(BaseEndpoint):
         self.response = requests.put(
             f"{self.url}/meme/{meme_id}", json=updated_data, headers=self.headers
         )
-        if not self.response.ok:
-            print(f"Ошибка: {self.response.status_code} - {self.response.text}")
-            return None
         return self.response.json()
 
     @allure.step("Удаление мема")

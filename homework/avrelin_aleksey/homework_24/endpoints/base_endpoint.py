@@ -22,7 +22,6 @@ memes_data = {
 }
 
 
-
 class BaseEndpoint:
     def __init__(self):
         self.url = BASE_URL
