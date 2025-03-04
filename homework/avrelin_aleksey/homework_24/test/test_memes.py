@@ -33,5 +33,5 @@ class TestMemes:
 
     @allure.story("Удаление мема")
     def test_delete_memes(self, memes_endpoint, token, create_memes_for_test):
-        response = memes_endpoint.delete_memes(create_memes_for_test, token)
+        memes_endpoint.delete_memes(create_memes_for_test, token)
         memes_endpoint.check_status_code(200)
