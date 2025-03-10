@@ -17,14 +17,14 @@ dynamical = PageElements()
 @allure.title("Проверка работы кнопки 'Start'")
 def test_dynamic_loading(driver):
 
-    with allure.step("Открывает главную страницу"):
+    with allure.step("Открыть главную страницу"):
         driver.get(BASE_URL)
 
     with allure.step("Нажать кнопку 'Start'"):
         button = driver.find_element("xpath", dynamical.button_start)
         button.click()
 
-    with allure.step("Ожидание на странице 'Hello World!'"):
+    with allure.step("Дождаться на странице 'Hello World!'"):
         wait = WebDriverWait(driver, 10)
         text = dynamical.text_word
         wait.until(EC.visibility_of_element_located(("xpath", text)))

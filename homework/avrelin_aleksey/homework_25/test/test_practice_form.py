@@ -19,22 +19,22 @@ BASE_URL_TEST2 = os.getenv("BASE_URL_TEST2")
 def test_practice_form(driver):
     config = ConfigPracticeForm()
 
-    with allure.step("Переход на главную страницу"):
+    with allure.step("Открыть главную страницу"):
         driver.get(BASE_URL_TEST2)
 
     wait = WebDriverWait(driver, 10)
     wait.until(EC.presence_of_element_located(("id", config.id_firstName)))
 
-    with allure.step("Заполнение поля 'First Name'"):
+    with allure.step("Заполнить поля 'First Name'"):
         driver.find_element("id", config.id_firstName).send_keys(config.FirstName)
 
-    with allure.step("Заполнение поля 'Last Name'"):
+    with allure.step("Заполнить поля 'Last Name'"):
         driver.find_element("id", config.id_lastName).send_keys(config.LastName)
 
-    with allure.step("Заполнение поля 'Email'"):
+    with allure.step("Заполнить поля 'Email'"):
         driver.find_element("id", config.id_userEmail).send_keys(config.UserEmail)
 
-    with allure.step("Заполнение поля 'Mobile Number'"):
+    with allure.step("Заполнить поля 'Mobile Number'"):
         driver.find_element("id", config.id_mobile_number).send_keys(
             config.mobile_number
         )
@@ -42,27 +42,27 @@ def test_practice_form(driver):
     with allure.step("Нажать радиокнопку 'Male'"):
         driver.find_element("xpath", config.xpath_radiobutton_male).click()
 
-    with allure.step("Открытие календаря"):
+    with allure.step("Открыть календарь"):
         calendar_input = driver.find_element("id", config.id_calendar)
         calendar_input.click()
 
-    with allure.step("Выбор месяца 'April' в календаре"):
+    with allure.step("Выбрать месяц 'April' в календаре"):
         month_dropdown = driver.find_element("class name", config.class_month)
         Select(month_dropdown).select_by_visible_text(config.month_name)
 
-    with allure.step("Выбор года '2022' в календаре"):
+    with allure.step("Выбрать год '2022' в календаре"):
         year_dropdown = driver.find_element("class name", config.class_year)
         Select(year_dropdown).select_by_visible_text(config.year)
 
-    with allure.step("Выбор 15-го дня в календаре"):
+    with allure.step("Выбрать день 15 в календаре"):
         driver.find_element("class name", config.class_15_days).click()
 
-    with allure.step("Заполнение поля 'Subjects'"):
+    with allure.step("Заполненить поле 'Subjects'"):
         field = driver.find_element("xpath", config.xpath_subjects)
         field.send_keys(config.subjects)
         field.send_keys(Keys.ENTER)
 
-    with allure.step("Выбор хобби 'Sports'"):
+    with allure.step("Выбрать хобби 'Sports'"):
         driver.find_element("xpath", config.xpath_hobbies_sport).click()
 
     # with allure.step("Загрузка файла"):
@@ -73,18 +73,18 @@ def test_practice_form(driver):
             config.current_address
         )
 
-    with allure.step("Выбор штата 'Haryana'"):
+    with allure.step("Выбрать облать 'Haryana'"):
         driver.find_element("id", config.id_state).click()
         driver.find_element("id", config.id_state_haryana).click()
 
-    with allure.step("Выбор города 'Panipat'"):
+    with allure.step("Выбрать город 'Panipat'"):
         driver.find_element("id", config.id_select_city).click()
         driver.find_element("id", config.id_city_panipat).click()
 
-    with allure.step("Нажатие кнопки 'Submit'"):
+    with allure.step("Нажать кнопку 'Submit'"):
         driver.find_element("id", config.id_button_submit).click()
 
-    with allure.step("Проверяем назвиние таблицы в модальном окне"):
+    with allure.step("Проверить назвиние таблицы в модальном окне"):
         wait = WebDriverWait(driver, 10)
         name_modal_header = wait.until(
             EC.visibility_of_element_located(("id", config.id_modal_header))
@@ -106,7 +106,7 @@ def test_practice_form(driver):
         "State and City": f"{config.State} {config.City}",
     }
 
-    with allure.step("Проверяем каждую строку таблицы в модальном окне"):
+    with allure.step("Проверить каждую строку таблицы в модальном окне"):
         table_element = driver.find_elements("css selector", ".table tbody tr")
         for element in table_element:
             label = element.find_element("css selector", "td:first-child").text

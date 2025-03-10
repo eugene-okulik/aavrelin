@@ -14,40 +14,40 @@ class TestInputs:
     @allure.title("Успешное добавление текста во вкладке 'Text input'")
     def test_text_inputs(self, driver, base_url_practice):
 
-        with allure.step("Перезодим на страницу Imputs"):
+        with allure.step("Выбрать вкладку меню Imputs"):
             driver.find_element("xpath", config.menu_inputs).click()
 
-        with allure.step("В поле вводим текст"):
+        with allure.step("Ввести текст"):
             text_in_field = driver.find_element("id", config.id_submits)
             text_in_field.send_keys(config.input_data)
 
-        with allure.step("Нажимаем Enter"):
+        with allure.step("Нажать Enter"):
             text_in_field.send_keys(Keys.ENTER)
 
-        with allure.step("Сравниваем введенный текст с результатом"):
+        with allure.step("Сравнить введенный текст с результатом"):
             result_text = driver.find_element("id", config.id_text_result)
             assert result_text.text == config.input_data
 
-        with allure.step("Печатаем текст"):
+        with allure.step("Распечатать текст"):
             print('\n', result_text.text)
 
     @allure.title("Успешное добавление email во вкладке 'Email field'")
     def test_good_email_field(self, driver, base_url_practice):
 
-        with allure.step("Перезодим на страницу Imputs"):
+        with allure.step("Выбрать вкладку меню Imputs"):
             driver.find_element("xpath", config.menu_inputs).click()
 
-        with allure.step('Переходим во вкладку "Email_field"'):
+        with allure.step('Выбрать во вкладку "Email_field"'):
             driver.find_element("xpath", config.email_field).click()
 
-        with allure.step("В поле вводим валидный email"):
+        with allure.step("В поле ввести валидный email"):
             text_in_field = driver.find_element("id", config.id_email)
             text_in_field.send_keys(config.email_good)
 
-        with allure.step("Нажимаем Enter"):
+        with allure.step("Нажать Enter"):
             text_in_field.send_keys(Keys.ENTER)
 
-        with allure.step("Сравниваем введенный текст с результатом"):
+        with allure.step("Сравнить введенный текст с результатом"):
             result_text = driver.find_element("id", config.id_text_result)
             assert (
                 result_text.text == config.email_good
@@ -56,20 +56,20 @@ class TestInputs:
     @allure.title("Ошибка при добавление невалидный email во вкладке 'Email field'")
     def test_bad_email_field(self, driver, base_url_practice):
 
-        with allure.step("Перезодим на страницу Imputs"):
+        with allure.step("Выбрать вкладку меню Imputs"):
             driver.find_element("xpath", config.menu_inputs).click()
 
-        with allure.step('Переходим во вкладку "Email_field"'):
+        with allure.step('Выбрать во вкладку "Email_field"'):
             driver.find_element("xpath", config.email_field).click()
 
-        with allure.step("В поле вводим невалидный email"):
+        with allure.step("В поле ввести невалидный email"):
             text_in_field = driver.find_element("id", config.id_email)
             text_in_field.send_keys(config.email_bad)
 
-        with allure.step("Нажимаем Enter"):
+        with allure.step("Нажать Enter"):
             text_in_field.send_keys(Keys.ENTER)
 
-        with allure.step("Сравниваем введенный текст с результатом"):
+        with allure.step("Сравнить введенный текст с результатом"):
             result_text = driver.find_element("id", config.id_error_email)
             assert (
                 result_text.text == config.email_error_text
@@ -78,20 +78,20 @@ class TestInputs:
     @allure.title("Успешная добавления пароля во вкладке 'Password field'")
     def test_good_password_field(self, driver, base_url_practice):
 
-        with allure.step("Перезодим на страницу Imputs"):
+        with allure.step("Выбрать вкладку меню Imputs"):
             driver.find_element("xpath", config.menu_inputs).click()
 
-        with allure.step('Переходим во вкладку "Password field"'):
+        with allure.step('Выбрать во вкладку "Password field"'):
             driver.find_element("xpath", config.password_field).click()
 
-        with allure.step("В поле вводим надежный пароль"):
+        with allure.step("В поле ввести надежный пароль"):
             text_in_field = driver.find_element("id", config.id_password)
             text_in_field.send_keys(config.good_password)
 
-        with allure.step("Нажимаем Enter"):
+        with allure.step("Нажать Enter"):
             text_in_field.send_keys(Keys.ENTER)
 
-        with allure.step("Сравниваем введенный текст с результатом"):
+        with allure.step("Сравнить введенный текст с результатом"):
             result_text = driver.find_element("id", config.id_text_result)
             assert (
                 result_text.text == config.good_password
@@ -100,20 +100,20 @@ class TestInputs:
     @allure.title("Добавление плохого пароля во вкладке 'Password field'")
     def test_bad_password_field(self, driver, base_url_practice):
 
-        with allure.step("Перезодим на страницу Imputs"):
+        with allure.step("Выбрать вкладку меню Imputs"):
             driver.find_element("xpath", config.menu_inputs).click()
 
-        with allure.step('Переходим во вкладку "Password field"'):
+        with allure.step('Выбрать вкладку "Password field"'):
             driver.find_element("xpath", config.password_field).click()
 
-        with allure.step("В поле вводим плохой пароль"):
+        with allure.step("В поле ввести плохой пароль"):
             text_in_field = driver.find_element("id", config.id_password)
             text_in_field.send_keys(config.bad_password)
 
-        with allure.step("Нажимаем Enter"):
+        with allure.step("Нажать Enter"):
             text_in_field.send_keys(Keys.ENTER)
 
-        with allure.step("Появляется плейсхолдер"):
+        with allure.step("Проверить наличие плейсхолдера"):
             error_result_text = driver.find_element("id", config.id_error_password)
             assert (
                 error_result_text.text == config.error_text_password
@@ -126,10 +126,10 @@ class TestSelect:
     @allure.title("Выбор языка програмирования")
     def test_practice_form(self, driver, base_url_practice):
 
-        with allure.step("Переход на страницу"):
+        with allure.step("ОВыбрать вкладку меню Select"):
             driver.find_element("xpath", config.menu_select).click()
 
-        with (allure.step("Выбирать селектор 'Java'")):
+        with (allure.step("В поле выбирать селектор 'Java'")):
             dropdown = driver.find_element("id", config.id_choose_language)
             select_element = Select(dropdown)
             select_element.select_by_value("4")
