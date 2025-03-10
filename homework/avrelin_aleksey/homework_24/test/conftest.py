@@ -1,26 +1,32 @@
 import pytest
+import dotenv
+import os
+import allure
 
-from endpoints.memes import Memes
-from endpoints.base_endpoint import Authorization
-from endpoints.base_endpoint import memes_data
-from endpoints.base_endpoint import USER_NAME
-
-
-@pytest.fixture(scope="session")
-def token():
-    authorization = Authorization()
-    token = authorization.authorization_user(USER_NAME)
-    yield token
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from endpoints.config_input_simple import ConfQAPractice
 
 
-@pytest.fixture
-def memes_endpoint():
-    return Memes()
+config = ConfQAPractice()
+dotenv.load_dotenv()
+BASE_URL = os.getenv("BASE_URL_TEST1")
 
 
-@pytest.fixture
-def create_memes_for_test(token, memes_endpoint):
-    response = memes_endpoint.create_memes(token, **memes_data)
-    meme_id = response["id"]
-    yield meme_id
-    memes_endpoint.delete_memes(meme_id, token)
+@pytest.fixture()
+def driver():
+    options = Options()
+    options.add_experimental_option("detach", True)
+    options.page_load_strategy = "eager"
+    chrome_driver = webdriver.Chrome(options=options)
+    chrome_driver.maximize_window()
+    yield chrome_driver
+    chrome_driver.quit()
+
+
+@pytest.fixture()
+def base_url_practice(driver):
+    with allure.step("Перезодим на главную страницу"):
+        driver.get(BASE_URL)
+        driver.find_element("xpath", config.menu_single_elements).click()
+        driver.implicitly_wait(10)
