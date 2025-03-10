@@ -26,7 +26,7 @@ def driver():
 
 @pytest.fixture()
 def base_url_practice(driver):
-    with allure.step("Перезодим на главную страницу"):
+    with allure.step("Открыть главную страницу"):
         driver.get(BASE_URL)
         driver.find_element("xpath", config.menu_single_elements).click()
         driver.implicitly_wait(10)

@@ -53,7 +53,7 @@ class TestInputs:
                 result_text.text == config.email_good
             ), f"Результат не равен {config.email_good}"
 
-    @allure.title("Ошибка при добавление невалидный email во вкладке 'Email field'")
+    @allure.title("Ошибка при добавление невалидного email во вкладке 'Email field'")
     def test_bad_email_field(self, driver, base_url_practice):
 
         with allure.step("Выбрать вкладку меню Imputs"):
@@ -75,7 +75,7 @@ class TestInputs:
                 result_text.text == config.email_error_text
             ), f"Результат не равен {config.email_error_text}"
 
-    @allure.title("Успешная добавления пароля во вкладке 'Password field'")
+    @allure.title("Успешное добавления пароля во вкладке 'Password field'")
     def test_good_password_field(self, driver, base_url_practice):
 
         with allure.step("Выбрать вкладку меню Imputs"):
@@ -126,7 +126,7 @@ class TestSelect:
     @allure.title("Выбор языка програмирования")
     def test_practice_form(self, driver, base_url_practice):
 
-        with allure.step("ОВыбрать вкладку меню Select"):
+        with allure.step("Выбрать вкладку меню Select"):
             driver.find_element("xpath", config.menu_select).click()
 
         with (allure.step("В поле выбирать селектор 'Java'")):
