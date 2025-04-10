@@ -16,6 +16,7 @@ def test_alert_check(page: Page):
     result_text_page = page.locator(".result-text")
     expect(result_text_page).to_have_text("Ok")
 
+
 def test_new_tab(page: Page, context: BrowserContext):
     page.goto("https://www.qa-practice.com/elements/new_tab/button")
     button_click = page.get_by_role('link', name='Click')
@@ -25,6 +26,7 @@ def test_new_tab(page: Page, context: BrowserContext):
     expect(new_page.locator(".result-text")).to_have_text("I am a new page in a new tab")
     expect(button_click).to_be_enabled()
     new_page.close()
+
 
 def test_button_color_change(page: Page):
     page.goto("https://demoqa.com/dynamic-properties", wait_until="domcontentloaded")
