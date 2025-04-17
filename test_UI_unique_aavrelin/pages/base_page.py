@@ -10,7 +10,7 @@ class BasePage:
         self.page = page
 
     def open_page(self):
-        with allure.step(f"Открываем страницу"):
+        with allure.step("Открываем страницу"):
             if self.page_url:
                 self.page.goto(f"{self.base_url}{self.page_url}", wait_until='domcontentloaded')
             else:
