@@ -1,6 +1,7 @@
 import allure
 from pages import data_for_test
 
+
 @allure.feature("Работа с коллекциями товаров")
 class TestProductCollections:
 

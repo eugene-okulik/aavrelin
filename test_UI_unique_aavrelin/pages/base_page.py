@@ -9,7 +9,6 @@ class BasePage:
     def __init__(self, page: Page):
         self.page = page
 
-
     def open_page(self):
         with allure.step(f"Открываем страницу"):
             if self.page_url:
