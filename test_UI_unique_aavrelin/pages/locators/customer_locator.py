@@ -1,0 +1,8 @@
+first_name_field_loc = "#firstname"
+last_name_field_loc = "#lastname"
+email_field_loc = "#email_address"
+password_field_loc = "#password"
+password_confirmation_loc = "#password-confirmation"
+button_create_an_account = ".action.submit.primary"
+success_message_loc = "//div[@class='message-success success message']/div"
+error_message_password_8symbols_loc = "//div[@id='password-error']"

@@ -1,0 +1,12 @@
+sale_main_loc = ".block-promo.sale-main"
+sale_mens_loc = ".block-promo.sale-mens"
+sale_women_loc = ".block-promo.sale-women"
+sale20off_loc = ".block-promo.sale-20-off"
+sale_free_shipping_loc = ".block-promo.sale-free-shipping"
+sale_women_tees_loc = ".block-promo.sale-womens-t-shirts"
+
+title_loc = ".title"
+info_loc = ".info"
+more_loc = ".more"
+page_title_loc = "h1.page-title .base"
+promo_blocks_loc = ".block-promo"
