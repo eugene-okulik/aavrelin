@@ -1,0 +1,10 @@
+less --help
+g        -   Go to first line in file:  
+G        -   Go to last line in file: 
+f ^F  ^V  SPACE  -  Forward one window: 
+e  ^E  j  ^N  CR -  Forward one line:        
+y  ^Y  k  ^K  ^P -  Backward one line:
+/pattern -  Search forward for matching line:
+?pattern -    Search backward for matching line:
+n        -    Repeat previous search:
+N        -    Repeat previous search in reverse direction:
