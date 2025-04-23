@@ -1,0 +1,135 @@
+Started by user admin
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/test_UI_unique_aavrelin
+[test_UI_unique_aavrelin] $ /bin/sh -xe /tmp/jenkins17494878353415891820.sh
++ cd test/test_UI_unique_aavrelin
++ git pull
+Already up to date.
++ python3 -m venv venv
++ . venv/bin/activate
++ deactivate nondestructive
++ [ -n  ]
++ [ -n  ]
++ [ -n  -o -n  ]
++ [ -n  ]
++ unset VIRTUAL_ENV
++ unset VIRTUAL_ENV_PROMPT
++ [ ! nondestructive = nondestructive ]
++ VIRTUAL_ENV=/var/jenkins_home/workspace/test_UI_unique_aavrelin/test/test_UI_unique_aavrelin/venv
++ export VIRTUAL_ENV
++ _OLD_VIRTUAL_PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++ PATH=/var/jenkins_home/workspace/test_UI_unique_aavrelin/test/test_UI_unique_aavrelin/venv/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++ export PATH
++ [ -n  ]
++ [ -z  ]
++ _OLD_VIRTUAL_PS1=$
++ PS1=(venv) $
++ export PS1
++ VIRTUAL_ENV_PROMPT=(venv)
++ export VIRTUAL_ENV_PROMPT
++ [ -n  -o -n  ]
++ playwright install chromium
++ pip install -r requirements.txt
+Requirement already satisfied: allure-pytest==2.13.5 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 1)) (2.13.5)
+Requirement already satisfied: allure-python-commons==2.13.5 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 2)) (2.13.5)
+Requirement already satisfied: attrs==25.1.0 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 3)) (25.1.0)
+Requirement already satisfied: blinker==1.9.0 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 4)) (1.9.0)
+Requirement already satisfied: Brotli==1.1.0 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 5)) (1.1.0)
+Requirement already satisfied: build==1.2.2.post1 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 6)) (1.2.2.post1)
+Requirement already satisfied: certifi==2025.1.31 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 7)) (2025.1.31)
+Requirement already satisfied: cffi==1.17.1 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 8)) (1.17.1)
+Requirement already satisfied: charset-normalizer==3.4.1 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 9)) (3.4.1)
+Requirement already satisfied: click==8.1.8 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 10)) (8.1.8)
+Requirement already satisfied: colorama==0.4.6 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 11)) (0.4.6)
+Requirement already satisfied: ConfigArgParse==1.7 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 12)) (1.7)
+Requirement already satisfied: dotenv==0.9.9 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 13)) (0.9.9)
+Requirement already satisfied: execnet==2.1.1 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 14)) (2.1.1)
+Requirement already satisfied: Faker==36.1.1 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 15)) (36.1.1)
+Requirement already satisfied: Flask==3.1.0 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 16)) (3.1.0)
+Requirement already satisfied: flask-cors==5.0.1 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 17)) (5.0.1)
+Requirement already satisfied: Flask-Login==0.6.3 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 18)) (0.6.3)
+Requirement already satisfied: gevent==24.11.1 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 19)) (24.11.1)
+Requirement already satisfied: geventhttpclient==2.3.3 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 20)) (2.3.3)
+Requirement already satisfied: greenlet==3.1.1 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 21)) (3.1.1)
+Requirement already satisfied: h11==0.14.0 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 22)) (0.14.0)
+Requirement already satisfied: idna==3.10 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 23)) (3.10)
+Requirement already satisfied: iniconfig==2.0.0 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 24)) (2.0.0)
+Requirement already satisfied: itsdangerous==2.2.0 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 25)) (2.2.0)
+Requirement already satisfied: Jinja2==3.1.5 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 26)) (3.1.5)
+Requirement already satisfied: locust==2.33.0 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 27)) (2.33.0)
+Requirement already satisfied: MarkupSafe==3.0.2 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 28)) (3.0.2)
+Requirement already satisfied: msgpack==1.1.0 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 29)) (1.1.0)
+Requirement already satisfied: outcome==1.3.0.post0 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 30)) (1.3.0.post0)
+Requirement already satisfied: packaging==24.2 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 31)) (24.2)
+Requirement already satisfied: pip-tools==7.4.1 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 32)) (7.4.1)
+Requirement already satisfied: playwright==1.51.0 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 33)) (1.51.0)
+Requirement already satisfied: pluggy==1.5.0 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 34)) (1.5.0)
+Requirement already satisfied: psutil==7.0.0 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 35)) (7.0.0)
+Requirement already satisfied: pycparser==2.22 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 36)) (2.22)
+Requirement already satisfied: pyee==12.1.1 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 37)) (12.1.1)
+Requirement already satisfied: pyproject_hooks==1.2.0 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 38)) (1.2.0)
+Requirement already satisfied: PySocks==1.7.1 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 39)) (1.7.1)
+Requirement already satisfied: pytest==8.3.4 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 40)) (8.3.4)
+Requirement already satisfied: pytest-base-url==2.1.0 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 41)) (2.1.0)
+Requirement already satisfied: pytest-playwright==0.7.0 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 42)) (0.7.0)
+Requirement already satisfied: pytest-rerunfailures==15.0 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 43)) (15.0)
+Requirement already satisfied: pytest-xdist==3.6.1 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 44)) (3.6.1)
+Requirement already satisfied: python-dotenv==1.0.1 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 45)) (1.0.1)
+Requirement already satisfied: python-slugify==8.0.4 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 46)) (8.0.4)
+Requirement already satisfied: pyzmq==26.2.1 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 47)) (26.2.1)
+Requirement already satisfied: requests==2.32.3 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 48)) (2.32.3)
+Requirement already satisfied: selenium==4.29.0 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 49)) (4.29.0)
+Requirement already satisfied: setuptools==75.8.0 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 50)) (75.8.0)
+Requirement already satisfied: sniffio==1.3.1 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 51)) (1.3.1)
+Requirement already satisfied: sortedcontainers==2.4.0 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 52)) (2.4.0)
+Requirement already satisfied: text-unidecode==1.3 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 53)) (1.3)
+Requirement already satisfied: trio==0.29.0 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 54)) (0.29.0)
+Requirement already satisfied: trio-websocket==0.12.2 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 55)) (0.12.2)
+Requirement already satisfied: typing_extensions==4.12.2 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 56)) (4.12.2)
+Requirement already satisfied: tzdata==2025.1 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 57)) (2025.1)
+Requirement already satisfied: urllib3==2.3.0 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 58)) (2.3.0)
+Requirement already satisfied: websocket-client==1.8.0 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 59)) (1.8.0)
+Requirement already satisfied: Werkzeug==3.1.3 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 60)) (3.1.3)
+Requirement already satisfied: wheel==0.45.1 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 61)) (0.45.1)
+Requirement already satisfied: wsproto==1.2.0 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 62)) (1.2.0)
+Requirement already satisfied: zope.event==5.0 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 63)) (5.0)
+Requirement already satisfied: zope.interface==7.2 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 64)) (7.2)
+Requirement already satisfied: pip>=22.2 in ./venv/lib/python3.11/site-packages (from pip-tools==7.4.1->-r requirements.txt (line 32)) (23.0.1)
++ pytest -v --alluredir=allure-results --clean-alluredir
+============================= test session starts ==============================
+platform linux -- Python 3.11.2, pytest-8.3.4, pluggy-1.5.0 -- /var/jenkins_home/workspace/test_UI_unique_aavrelin/test/test_UI_unique_aavrelin/venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /var/jenkins_home/workspace/test_UI_unique_aavrelin/test/test_UI_unique_aavrelin
+configfile: pytest.ini
+plugins: allure-pytest-2.13.5, Faker-36.1.1, base-url-2.1.0, playwright-0.7.0, rerunfailures-15.0, xdist-3.6.1
+collecting ... collected 8 items
+
+test/test_collections.py::TestProductCollections::test_apply_product_filters[chromium] PASSED [ 12%]
+test/test_collections.py::TestProductCollections::test_add_products_to_compare[chromium] PASSED [ 25%]
+test/test_customer.py::TestCustomerRegistration::test_successful_account_creation[chromium] PASSED [ 37%]
+test/test_customer.py::TestCustomerRegistration::test_registration_with_invalid_password[chromium-243234] PASSED [ 50%]
+test/test_customer.py::TestCustomerRegistration::test_registration_with_invalid_password[chromium-a] PASSED [ 62%]
+test/test_customer.py::TestCustomerRegistration::test_registration_with_invalid_password[chromium-ssss] PASSED [ 75%]
+test/test_customer.py::TestCustomerRegistration::test_registration_with_invalid_password[chromium-ADas!@d] PASSED [ 87%]
+test/test_sale.py::TestAccountCreation::test_checking_links_on_sale_page[chromium] PASSED [100%]
+
+========================= 8 passed in 90.28s (0:01:30) =========================
++ pytest --alluredir=allure-results
+============================= test session starts ==============================
+platform linux -- Python 3.11.2, pytest-8.3.4, pluggy-1.5.0
+rootdir: /var/jenkins_home/workspace/test_UI_unique_aavrelin/test/test_UI_unique_aavrelin
+configfile: pytest.ini
+plugins: allure-pytest-2.13.5, Faker-36.1.1, base-url-2.1.0, playwright-0.7.0, rerunfailures-15.0, xdist-3.6.1
+collected 8 items
+
+test/test_collections.py::TestProductCollections::test_apply_product_filters[chromium] PASSED [ 12%]
+test/test_collections.py::TestProductCollections::test_add_products_to_compare[chromium] PASSED [ 25%]
+test/test_customer.py::TestCustomerRegistration::test_successful_account_creation[chromium] PASSED [ 37%]
+test/test_customer.py::TestCustomerRegistration::test_registration_with_invalid_password[chromium-243234] PASSED [ 50%]
+test/test_customer.py::TestCustomerRegistration::test_registration_with_invalid_password[chromium-a] PASSED [ 62%]
+test/test_customer.py::TestCustomerRegistration::test_registration_with_invalid_password[chromium-ssss] PASSED [ 75%]
+test/test_customer.py::TestCustomerRegistration::test_registration_with_invalid_password[chromium-ADas!@d] PASSED [ 87%]
+test/test_sale.py::TestAccountCreation::test_checking_links_on_sale_page[chromium] PASSED [100%]
+
+======================== 8 passed in 103.63s (0:01:43) =========================
+Finished: SUCCESS
