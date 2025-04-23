@@ -1,4 +1,5 @@
 import pytest
+import random
 
 from playwright.sync_api import Page, BrowserContext
 from pages.collections import CollectionPage
@@ -10,7 +11,8 @@ from pages.sale import SalePage
 def page(context: BrowserContext):
     page = context.new_page()
     page.set_viewport_size({"width": 1920, "height": 1080})
-    return page
+    yield page
+    page.screenshot(path=f"{str(random.randint(100,10000))}_screenshot.png")
 
 
 @pytest.fixture()
